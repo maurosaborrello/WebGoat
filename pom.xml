@@ -20,6 +20,9 @@
         <org.springframework.version>3.2.4.RELEASE</org.springframework.version>
         <spring.security.version>3.2.4.RELEASE</spring.security.version>
         <tiles.version>2.2.2</tiles.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<sonar.language>java</sonar.language>
+
         <!-- If run from Bamboo this will be replaced with the bamboo build number -->
         <build.number>local</build.number>
     </properties>
@@ -77,7 +80,13 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>            
+            </plugin>       
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>2.1</version>
+			</plugin>
+			
         </plugins>
     </build>
 
